@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [activities, setActivities] = useState([]);
+  const [activities, setActivities] = useState<Activity[]>([]);
 
   useEffect(() => {
     fetch('https://localhost:5001/api/activities')
