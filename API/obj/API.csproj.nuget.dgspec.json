@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SteveKrenn\\Learning Projects\\Reactivities\\API\\API.csproj": {}
+    "C:\\Users\\SteveKrenn\\Learning Projects\\Reactivities\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SteveKrenn\\Learning Projects\\Reactivities\\API\\API.csproj": {
+    "C:\\Users\\SteveKrenn\\Learning Projects\\Reactivities\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SteveKrenn\\Learning Projects\\Reactivities\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\SteveKrenn\\Learning Projects\\Reactivities\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\SteveKrenn\\Learning Projects\\Reactivities\\API\\API.csproj",
+        "projectPath": "C:\\Users\\SteveKrenn\\Learning Projects\\Reactivities\\api\\API.csproj",
         "packagesPath": "C:\\Users\\SteveKrenn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SteveKrenn\\Learning Projects\\Reactivities\\API\\obj\\",
+        "outputPath": "C:\\Users\\SteveKrenn\\Learning Projects\\Reactivities\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
