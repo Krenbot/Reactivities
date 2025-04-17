@@ -10,7 +10,6 @@ namespace API.Controllers
     {
         private IMediator? _mediator;
 
-        //Null-coalescing operator: ??= assigns right side if left side is null
         protected IMediator Mediator =>
             _mediator ??=
                 HttpContext.RequestServices.GetService<IMediator>()
