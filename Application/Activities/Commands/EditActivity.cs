@@ -1,4 +1,3 @@
-using System;
 using AutoMapper;
 using Domain;
 using MediatR;
@@ -22,6 +21,7 @@ public class EditActivity
                 ?? throw new Exception("Cannot find activity");
 
             mapper.Map(request.Activity, activity);
+
             await context.SaveChangesAsync(cancellationToken);
         }
     }
