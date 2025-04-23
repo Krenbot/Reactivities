@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react';
-import { CssBaseline, List, ListItem, ListItemText } from '@mui/material';
+import {
+  Container,
+  CssBaseline,
+  List,
+  ListItem,
+  ListItemText,
+} from '@mui/material';
 import axios from 'axios';
 import NavBar from './NavBar';
 
@@ -16,13 +22,16 @@ function App() {
     <>
       <CssBaseline />
       <NavBar />
-      <List>
-        {activities.map((activity) => (
-          <ListItem key={activity.id}>
-            <ListItemText>{activity.title}</ListItemText>
-          </ListItem>
-        ))}
-      </List>
+      <Container maxWidth="xl" sx={{ mt: 3 }}>
+        {' '}
+        <List>
+          {activities.map((activity) => (
+            <ListItem key={activity.id}>
+              <ListItemText>{activity.title}</ListItemText>
+            </ListItem>
+          ))}
+        </List>
+      </Container>
     </>
   );
 }
