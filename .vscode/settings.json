@@ -1,1 +1,14 @@
-{}
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*",
+        "cmd": "workbench.action.tasks.runTask Open API Terminal"
+      },
+      {
+        "match": ".*",
+        "cmd": "workbench.action.tasks.runTask Open Web Terminal"
+      }
+    ]
+  }
+}
