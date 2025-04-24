@@ -7,9 +7,9 @@ import {
   Typography,
 } from '@mui/material';
 
-type Props = { activity: Activity };
+type Props = { activity: Activity; selectActivity: (id: string) => void };
 
-export default function ActivityCard({ activity }: Props) {
+export default function ActivityCard({ activity, selectActivity }: Props) {
   return (
     <Card sx={{ borderRadius: 3 }}>
       <CardContent>
@@ -27,7 +27,11 @@ export default function ActivityCard({ activity }: Props) {
         sx={{ display: 'flex', justifyContent: 'space-between', pb: 2 }}
       >
         <Chip label={activity.category} variant="outlined" />
-        <Button size="medium" variant="contained">
+        <Button
+          size="medium"
+          variant="contained"
+          onClick={() => selectActivity(activity.id)}
+        >
           View
         </Button>
       </CardActions>
