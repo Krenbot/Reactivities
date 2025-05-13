@@ -1,8 +1,8 @@
-import { useState } from 'react';
 import { Box, Container, CssBaseline, Typography } from '@mui/material';
+import { useState } from 'react';
 import NavBar from './NavBar';
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard';
-import { useActivities } from '../../lib/hooks/useActivities.tsx';
+import { useActivities } from '../../lib/hooks/useActivities';
 
 function App() {
   const [selectedActivity, setSelectedActivity] = useState<
