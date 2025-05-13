@@ -2,5 +2,8 @@
   "scripts": {
     "dev": "cd client && npm run dev",
     "api": "cd api && dotnet run watch"
+  },
+  "dependencies": {
+    "react-router": "^7.6.0"
   }
 }
