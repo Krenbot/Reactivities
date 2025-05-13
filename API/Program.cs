@@ -52,4 +52,6 @@ catch (Exception ex)
     logger.LogError(ex, "An error occurred during migration.");
 }
 
+Console.WriteLine("API app running on: http://localhost:5001");
+
 app.Run();

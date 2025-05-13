@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function ActivityForm({ activity, closeForm }: Props) {
-  const { updateActivity } = useActivities();
+  const { updateActivity, createActivity } = useActivities();
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -19,9 +19,17 @@ export default function ActivityForm({ activity, closeForm }: Props) {
       data[key] = value;
     });
 
+    // Check if an existing activity is being edited
     if (activity) {
+      // Assign the existing activity's ID to the data object
       data.id = activity.id;
+      // Call the update mutation with the data, casting it to an Activity type
       await updateActivity.mutateAsync(data as unknown as Activity);
+      // Close the form after updating
+      closeForm();
+    } else {
+      // If no existing activity, call the create mutation to add a new activity
+      await createActivity.mutateAsync(data as unknown as Activity);
       closeForm();
     }
   };
@@ -69,7 +77,7 @@ export default function ActivityForm({ activity, closeForm }: Props) {
           </Button>
           <Button
             type="submit"
-            disabled={updateActivity.isPending}
+            disabled={updateActivity.isPending || createActivity.isPending}
             color="success"
             variant="contained"
           >
