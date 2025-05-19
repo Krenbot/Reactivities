@@ -6,13 +6,18 @@ import {
   CardMedia,
   Typography,
 } from '@mui/material';
-import { Link, useNavigate } from 'react-router';
+import { Link, useParams } from 'react-router';
+import { useNavigate } from 'react-router';
+import { useActivities } from '../../../lib/hooks/useActivities';
 
 export default function ActivityDetails() {
-  const activity = {} as Activity;
   const navigate = useNavigate();
+  const { id } = useParams();
+  const { activity, isLoadingActivity } = useActivities(id);
 
-  if (!activity) return <Typography>Loading...</Typography>;
+  if (isLoadingActivity) return <Typography>Loading...</Typography>;
+
+  if (!activity) return <Typography>Activity not found</Typography>;
 
   return (
     <Card sx={{ borderRadius: 3 }}>
